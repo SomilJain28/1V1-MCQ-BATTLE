@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { Urls } from "../../constant/Urls";
 import AuthContext from "../../contexts/auth.context";
-import { Login } from "../../services/api/auth/auth.service"; // Import the login service
+import { Login } from "../../services/api/auth/auth.service"; 
 import {SetAccessToken, SetRefreshToken} from "../../services/cookie/authToken.cookie.js";
 
 function LoginComponent() {
@@ -14,7 +14,7 @@ function LoginComponent() {
 
   const onFinish = async (values) => {
     try {
-      const response = await Login(values); // Use the login service
+      const response = await Login(values);
       SetAccessToken(response.data.access);
       SetRefreshToken(response.data.refresh);
       setIsLoggedInUser(true);

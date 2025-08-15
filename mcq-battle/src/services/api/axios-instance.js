@@ -1,12 +1,11 @@
-// src/services/api/axios-instance.js
 import axios from "axios";
 import { GetAccessToken } from '../cookie/authToken.cookie.js';
 const BASE_URL = import.meta.env.VITE_BASE_API_URL;
 
-// Create an Axios instance
+
 const axiosInstance = axios.create();
 
-// Set up a request interceptor
+
 axiosInstance.interceptors.request.use(
   (config) => {
     config.url = BASE_URL + config.url;
@@ -19,7 +18,7 @@ axiosInstance.interceptors.request.use(
     return config;
   },
   (error) => {
-    // Handle request error here
+   
     return Promise.reject(error);
   }
 );
