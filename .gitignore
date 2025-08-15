@@ -1,0 +1,10 @@
+# Django / Python
+db.sqlite3
+__pycache__/
+*.pyc
+/venv/
+
+# Frontend (Vite/React)
+node_modules/
+dist/
+.env
