@@ -15,6 +15,7 @@ function LoginComponent() {
   const onFinish = async (values) => {
     try {
       const response = await Login(values);
+      console.log("Login API Response:", response.data); 
       SetAccessToken(response.data.access);
       SetRefreshToken(response.data.refresh);
       setIsLoggedInUser(true);
